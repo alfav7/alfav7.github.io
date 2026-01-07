@@ -166,3 +166,57 @@ body.dark-mode .logo { color: white; }
     .hero { padding: 40px 10px; }
     .slider-container { height: 220px; } /* Slider sedikit lebih pendek di HP */
 }
+
+/* --- KONTAK STYLE --- */
+.contact-hover {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+/* Warna Default (Mode Terang) */
+.contact-title {
+    color: #333;
+}
+.contact-text {
+    color: #666;
+}
+
+/* --- KONTAK CARD --- */
+.contact-card {
+    background-color: #ffffff; /* Default putih */
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.contact-title {
+    color: #333;
+}
+
+.contact-text {
+    color: #666;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+    border-color: var(--primary);
+}
+
+/* --- PERBAIKAN MODE GELAP --- */
+body.dark-mode .contact-card {
+    background-color: #252525 !important; /* Latar belakang gelap */
+    border-color: #444;
+}
+
+body.dark-mode .contact-title {
+    color: #ffffff !important; /* Judul putih */
+}
+
+body.dark-mode .contact-text {
+    color: #cccccc !important; /* Teks email/hp abu terang */
+}
+
+body.dark-mode .contact-card:hover {
+    background-color: #2d2d2d !important;
+    border-color: var(--primary);
+}
