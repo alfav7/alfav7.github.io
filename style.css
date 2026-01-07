@@ -1,10 +1,168 @@
+:root {
+    --primary: #007bff;
+    --dark: #121212;
+    --light: #f4f4f4;
+    --text-main: #333;
+    --text-muted: #555;
+}
+
+/* --- DASAR --- */
 body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif; /* Font lebih modern */
+    background-color: var(--light);
+    color: var(--text-main);
+    transition: 0.3s;
+    line-height: 1.6;
+}
+
+/* --- NAVIGASI --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { font-size: 1.2rem; }
+.logo span { color: var(--primary); font-weight: bold; }
+
+/* --- HERO SECTION --- */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+}
+
+.hero h1 { margin-bottom: 10px; }
+.hero p { opacity: 0.9; margin: 0; }
+
+/* --- GRID PROYEK (2 KOLOM) --- */
+.portfolio-container { padding: 40px 10%; }
+
+.portfolio-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Tetap 2 kolom */
+    gap: 30px;
+}
+
+/* --- KARTU PROYEK --- */
+.project-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* --- SLIDER --- */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 280px; /* Tinggi sedikit ditambah agar lega */
+    background: #000;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: none;
+}
+
+.slide.active { display: block; animation: fade 0.5s; }
+
+@keyframes fade {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.2rem;
+    transition: 0.2s;
+}
+
+.slider-btn:hover { background: rgba(0,0,0,0.8); }
+.prev-btn { left: 0; border-radius: 0 5px 5px 0; }
+.next-btn { right: 0; border-radius: 5px 0 0 5px; }
+
+/* --- TIPOGRAFI FLUID & RAPI --- */
+.project-card h3 {
+    padding: 20px 25px 10px 25px;
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--primary);
+}
+
+.project-info {
+    padding: 0 25px 25px 25px;
+    flex-grow: 1;
+}
+
+.project-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    text-align: justify; /* Membuat teks rata kanan-kiri */
+    line-height: 1.7; /* Jarak baris lebih renggang agar fluid */
+}
+
+/* Container khusus untuk slide video */
+.video-slide-container {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: sans-serif;
-    transition: 0.5s;
+    background-color: #000; /* Background hitam agar video vertikal rapi */
 }
-.container { text-align: center; }
-button { padding: 10px 20px; cursor: pointer; border-radius: 8px; border: none; background: #007bff; color: white; }
+
+/* Mengatur iframe agar tidak bentrok dengan tombol slider */
+.video-slide-container iframe {
+    height: 100%;
+    aspect-ratio: 9/16; /* Menjaga rasio HP tetap asli */
+    border: none;
+}
+
+/* Memastikan tombol slider selalu di atas iframe */
+.slider-btn {
+    z-index: 20; 
+}
+
+/* --- MODE GELAP --- */
+body.dark-mode { background: var(--dark); color: white; }
+body.dark-mode nav { background: #1e1e1e; }
+body.dark-mode .project-card { background: #252525; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+body.dark-mode .project-info p { color: #bbb; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .project-grid { grid-template-columns: 1fr; } /* Jadi 1 kolom di layar kecil */
+    .portfolio-container { padding: 30px 5%; }
+}
