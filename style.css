@@ -9,14 +9,14 @@
 /* --- DASAR --- */
 body {
     margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif; /* Font lebih modern */
+    font-family: 'Segoe UI', Arial, sans-serif;
     background-color: var(--light);
     color: var(--text-main);
     transition: 0.3s;
     line-height: 1.6;
 }
 
-/* --- NAVIGASI --- */
+/* --- NAVIGASI (Kustom) --- */
 nav {
     display: flex;
     justify-content: space-between;
@@ -32,59 +32,62 @@ nav {
 .logo { font-size: 1.2rem; }
 .logo span { color: var(--primary); font-weight: bold; }
 
+/* Tombol Mode Gelap agar tetap rapi */
+#modeBtn {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#modeBtn:hover {
+    background: var(--primary);
+    color: white;
+}
+
 /* --- HERO SECTION --- */
 .hero {
     text-align: center;
-    padding: 40px 20px;
+    padding: 60px 20px;
     background: linear-gradient(to right, #007bff, #00c6ff);
     color: white;
 }
 
-.hero h1 { margin-bottom: 10px; }
-.hero p { opacity: 0.9; margin: 0; }
+.hero h1 { font-weight: 700; }
 
-/* --- GRID PROYEK (2 KOLOM) --- */
-.portfolio-container { padding: 40px 10%; }
-
-.portfolio-container h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Tetap 2 kolom */
-    gap: 30px;
-}
-
-/* --- KARTU PROYEK --- */
+/* --- KARTU PROYEK (Disesuaikan untuk Bootstrap) --- */
 .project-card {
     background: white;
     border-radius: 12px;
     overflow: hidden;
+    /* Box shadow diringkas karena Bootstrap col terkadang memiliki margin sendiri */
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Memastikan tinggi kartu rata */
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-/* --- SLIDER --- */
+/* --- SLIDER (Inti Portofolio Anda) --- */
 .slider-container {
     position: relative;
     width: 100%;
-    height: 280px; /* Tinggi sedikit ditambah agar lega */
+    height: 280px; 
     background: #000;
 }
 
 .slide {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: contain; /* Menjaga aspek rasio gambar di dalam slider */
     display: none;
 }
 
@@ -104,7 +107,7 @@ nav {
     border: none;
     padding: 12px 15px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 20; /* Ditingkatkan agar di atas video */
     font-size: 1.2rem;
     transition: 0.2s;
 }
@@ -113,56 +116,53 @@ nav {
 .prev-btn { left: 0; border-radius: 0 5px 5px 0; }
 .next-btn { right: 0; border-radius: 5px 0 0 5px; }
 
-/* --- TIPOGRAFI FLUID & RAPI --- */
-.project-card h3 {
-    padding: 20px 25px 10px 25px;
-    margin: 0;
-    font-size: 1.4rem;
-    color: var(--primary);
-}
-
-.project-info {
-    padding: 0 25px 25px 25px;
-    flex-grow: 1;
-}
-
-.project-info p {
-    margin: 0;
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    text-align: justify; /* Membuat teks rata kanan-kiri */
-    line-height: 1.7; /* Jarak baris lebih renggang agar fluid */
-}
-
-/* Container khusus untuk slide video */
+/* --- VIDEO (Shorts Support) --- */
 .video-slide-container {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
-    background-color: #000; /* Background hitam agar video vertikal rapi */
+    background-color: #000;
 }
 
-/* Mengatur iframe agar tidak bentrok dengan tombol slider */
 .video-slide-container iframe {
     height: 100%;
-    aspect-ratio: 9/16; /* Menjaga rasio HP tetap asli */
+    aspect-ratio: 9/16; 
     border: none;
 }
 
-/* Memastikan tombol slider selalu di atas iframe */
-.slider-btn {
-    z-index: 20; 
+/* --- TIPOGRAFI --- */
+.project-card h3 {
+    padding: 20px 25px 10px 25px;
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary);
 }
 
-/* --- MODE GELAP --- */
+.project-info {
+    padding: 0 25px 25px 25px;
+}
+
+.project-info p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    text-align: justify;
+    line-height: 1.7;
+}
+
+/* --- MODE GELAP (Override Bootstrap) --- */
 body.dark-mode { background: var(--dark); color: white; }
 body.dark-mode nav { background: #1e1e1e; }
-body.dark-mode .project-card { background: #252525; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+body.dark-mode .project-card { background: #252525; border: 1px solid #333; }
 body.dark-mode .project-info p { color: #bbb; }
+body.dark-mode .logo { color: white; }
 
 /* --- RESPONSIVE --- */
-@media (max-width: 900px) {
-    .project-grid { grid-template-columns: 1fr; } /* Jadi 1 kolom di layar kecil */
-    .portfolio-container { padding: 30px 5%; }
+/* Kita menggunakan grid Bootstrap di HTML, jadi media query CSS di sini lebih fokus pada padding */
+@media (max-width: 768px) {
+    .portfolio-container { padding: 30px 2%; }
+    .hero { padding: 40px 10px; }
+    .slider-container { height: 220px; } /* Slider sedikit lebih pendek di HP */
 }

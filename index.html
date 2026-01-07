@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Fahmy Alfa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,115 +14,128 @@
     </nav>
 
     <header class="hero">
-        <h1>Creative Portfolio</h1>
-        <p>Menampilkan hasil karya terbaik dan dedikasi dalam setiap proyek.</p>
+        <h1>Portofolio</h1>
+        <p>Perkenalkan nama saya Fahmi Alfarhido. Profesional IT dengan pengalaman beragam sebagai Teknisi & Cloud di PT. Digital Robotik Indonesia dan guru SMK Teknik Komputer dan
+           Jaringan. Memiliki latar belakang pendidikan di bidang Sistem Informasi serta pengalaman dalam mengelola layanan internet. Menguasai
+           jaringan komputer, cloud computing, dan pemecahan masalah teknis. Menggabungkan pengetahuan akademis dan pengalaman praktis
+           untuk memberikan solusi efektif dalam teknologi informasi.</p>
     </header>
 
-    <section class="portfolio-container">
-        <div class="section-title">
-            <h2>Project Saya</h2>
-            <p>Berikut adalah beberapa project yang pernah saya kerjakan</p>
+    <section class="container my-5 portfolio-container">
+        <div class="section-title text-center mb-5">
+            <h2 class="fw-bold">Project Saya</h2>
+            <p class="text-muted">Berikut adalah beberapa project yang pernah saya kerjakan</p>
         </div>
 
-        <div class="project-grid">
+        <div class="row row-cols-1 row-cols-md-2 g-4 project-grid">
             
-            <div class="project-card">
-                <h3>Instalasi CCTV Industri</h3>
-                <div class="slider-container">
-                    <button class="slider-btn prev-btn">&#10094;</button>
-                    <img src="https://i.ibb.co.com/0RCzHsZg/instalasi-cctv2.jpg" class="slide active">
-                    <img src="https://i.ibb.co.com/jkQrdxYT/instalasi-cctv.jpg" class="slide">
-                    <button class="slider-btn next-btn">&#10095;</button>
-                </div>
-                <div class="project-info">
-                    <p>
-                        Salah satu project yang saya kerjakan yaitu pemasangan 34 titik IP Camera di salah satu pabrik pada kawasan industri Jababeka. 
-                        Fokus utama mencakup manajemen kabel yang terstruktur, konfigurasi server DVR, dan integrasi sistem keamanan secara <i>real-time</i>.
-                    </p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>wifivoucher.id</h3>
-                <div class="slider-container">
-                    <button class="slider-btn prev-btn">&#10094;</button>
-                    <img src="https://i.ibb.co.com/mVzJK1w5/mini-server.jpg" class="slide active" alt="Mini Server">
-                    <img src="https://i.ibb.co.com/vCFtwD56/mikhmon.png" class="slide" alt="Mikhmon UI">
-                    <button class="slider-btn next-btn">&#10095;</button>
-                </div>
-                <div class="project-info">
-                    <p>
-                        Mengelola infrastruktur jaringan <b>wifivoucher.id</b> yang melayani lebih dari 150 klien aktif dengan fokus pada ketersediaan tinggi (<i>High Availability</i>).
-                    </p>
-                    <p>
-                        Konfigurasi mencakup <b>Load Balancing & Failover</b> dual ISP dengan metode <b>Netwatch</b> untuk memastikan perpindahan jalur internet secara instan dan otomatis jika terjadi gangguan.
-                    </p>
+            <div class="col">
+                <div class="project-card h-100 shadow-sm">
+                    <h3>Instalasi CCTV Industri</h3>
+                    <div class="slider-container">
+                        <button class="slider-btn prev-btn">&#10094;</button>
+                        <img src="https://i.ibb.co.com/0RCzHsZg/instalasi-cctv2.jpg" class="slide active">
+                        <img src="https://i.ibb.co.com/jkQrdxYT/instalasi-cctv.jpg" class="slide">
+                        <button class="slider-btn next-btn">&#10095;</button>
+                    </div>
+                    <div class="project-info p-3">
+                        <p>
+                            Salah satu project yang saya kerjakan yaitu pemasangan 34 titik IP Camera di salah satu pabrik pada kawasan industri Jababeka. 
+                            Fokus utama mencakup manajemen kabel yang terstruktur, konfigurasi server DVR, dan integrasi sistem keamanan secara <i>real-time</i>.
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="project-card">
-                <h3>Hardware & OS Maintenance</h3>
-                <div class="slider-container">
-                    <button class="slider-btn prev-btn">&#10094;</button>
-                    <img src="https://i.ibb.co.com/67Gdkv97/maintenance-laptop2.jpg" class="slide active" alt="Maintenance Process">
-                    <img src="https://i.ibb.co.com/nsgndkxn/maintenance-laptop1.jpg" class="slide" alt="Maintenance Process 2">
-                    <img src="https://i.ibb.co.com/35brTTx0/rakitanpc.jpg" class="slide" alt="Rakitan PC Saya">
-                    <button class="slider-btn next-btn">&#10095;</button>
-                </div>
-                <div class="project-info">
-                    <p>
-                        Saya juga terbiasa melakukan pemeliharaan laptop dan PC meliputi <b>Deep Cleaning</b>, penggantian <i>thermal paste</i>, <b>Perakitan PC</b> serta upgrade hardware untuk optimalisasi performa workstation kantor.
-                    </p>
-                    <p>
-                        Menangani juga optimasi sistem operasi melalui instalasi ulang, pembersihan file sampah, dan penanganan error sistem guna menjaga stabilitas kerja perangkat.
-                    </p>
-                </div>
-            </div>
-
-            <div class="project-card">
-    <h3>Install Server & Network</h3>
-    <div class="slider-container">
-        <button class="slider-btn prev-btn">&#10094;</button>
-        
-        <div class="slide active">
-            <div class="video-slide-container">
-                <iframe 
-                    src="https://www.youtube.com/embed/zkpU3d7Mre0?modestbranding=1&rel=0" allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-        <img src="https://i.ibb.co.com/4ZM1TMkj/install-server2.jpg" class="slide">
-        <img src="https://i.ibb.co.com/3G7b2DV/proxmox.png" class="slide">
-        <button class="slider-btn next-btn">&#10095;</button>
-    </div>
-    <div class="project-info">
-        <p>
-            Pengalaman dalam instalasi dan konfigurasi unit server dari tahap perakitan fisik hingga deployment sistem. Menggunakan Proxmox sebagai Hypervisor, saya membangun lingkungan server yang fleksibel dengan fitur backup dan restore yang cepat.
-        </p>
-        <p>"Fokus utama proyek ini adalah menciptakan infrastruktur yang stabil dengan pemantauan resource CPU, RAM, dan jaringan secara real-time, guna memastikan layanan yang berjalan di atasnya memiliki uptime yang maksimal.
-
-        </p>
-    </div>
-</div>
-
-            <div class="project-card">
-                <h3> Guru Teknik Komputer dan Jaringan</h3>
-                <div class="slider-container">
-                    <button class="slider-btn prev-btn">&#10094;</button>
-                    <img src="https://i.ibb.co.com/gFD6rSTh/guru-tkj.jpg" class="slide active" alt="guru-tkj">
-                    <button class="slider-btn next-btn">&#10095;</button>
-                </div>
-                <div class="project-info">
-                    <p>
-                       Sebagai mantan Guru Teknik Komputer dan Jaringan (TKJ), saya terbiasa melakukan pendekatan berbasis solusi (problem-solving) dalam membimbing siswa menghadapi tantangan teknis. Pengalaman ini membentuk karakter yang sabar, teliti, dan komunikatif dalam melakukan troubleshooting perangkat keras maupun infrastruktur jaringan.
-                    <p>
-                        Saya percaya bahwa komunikasi yang baik adalah kunci utama dalam keberhasilan transfer ilmu dan kolaborasi tim dalam lingkungan kerja IT yang dinamis.
-                    </p>
+            <div class="col">
+                <div class="project-card h-100 shadow-sm">
+                    <h3>wifivoucher.id</h3>
+                    <div class="slider-container">
+                        <button class="slider-btn prev-btn">&#10094;</button>
+                        <img src="https://i.ibb.co.com/mVzJK1w5/mini-server.jpg" class="slide active" alt="Mini Server">
+                        <img src="https://i.ibb.co.com/vCFtwD56/mikhmon.png" class="slide" alt="Mikhmon UI">
+                        <button class="slider-btn next-btn">&#10095;</button>
+                    </div>
+                    <div class="project-info p-3">
+                        <p>
+                            Mengelola infrastruktur jaringan <b>wifivoucher.id</b> yang melayani lebih dari 150 klien aktif dengan fokus pada ketersediaan tinggi (<i>High Availability</i>).
+                        </p>
+                        <p>
+                            Konfigurasi mencakup <b>Load Balancing & Failover</b> dual ISP dengan metode <b>Netwatch</b> untuk memastikan perpindahan jalur internet secara instan dan otomatis jika terjadi gangguan.
+                        </p>
+                    </div>
                 </div>
             </div>
 
-        </div> </section>
+            <div class="col">
+                <div class="project-card h-100 shadow-sm">
+                    <h3>Hardware & OS Maintenance</h3>
+                    <div class="slider-container">
+                        <button class="slider-btn prev-btn">&#10094;</button>
+                        <img src="https://i.ibb.co.com/67Gdkv97/maintenance-laptop2.jpg" class="slide active" alt="Maintenance Process">
+                        <img src="https://i.ibb.co.com/nsgndkxn/maintenance-laptop1.jpg" class="slide" alt="Maintenance Process 2">
+                        <img src="https://i.ibb.co.com/35brTTx0/rakitanpc.jpg" class="slide" alt="Rakitan PC Saya">
+                        <button class="slider-btn next-btn">&#10095;</button>
+                    </div>
+                    <div class="project-info p-3">
+                        <p>
+                            Saya juga terbiasa melakukan pemeliharaan laptop dan PC meliputi <b>Deep Cleaning</b>, penggantian <i>thermal paste</i>, <b>Perakitan PC</b> serta upgrade hardware untuk optimalisasi performa workstation kantor.
+                        </p>
+                        <p>
+                            Menangani juga optimasi sistem operasi melalui instalasi ulang, pembersihan file sampah, dan penanganan error sistem guna menjaga stabilitas kerja perangkat.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col">
+                <div class="project-card h-100 shadow-sm">
+                    <h3>Install Server & Network</h3>
+                    <div class="slider-container">
+                        <button class="slider-btn prev-btn">&#10094;</button>
+                        <div class="slide active">
+                            <div class="video-slide-container">
+                                <iframe src="https://www.youtube.com/embed/zkpU3d7Mre0?modestbranding=1&rel=0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <img src="https://i.ibb.co.com/4ZM1TMkj/install-server2.jpg" class="slide">
+                        <img src="https://i.ibb.co.com/3G7b2DV/proxmox.png" class="slide">
+                        <button class="slider-btn next-btn">&#10095;</button>
+                    </div>
+                    <div class="project-info p-3">
+                        <p>
+                            Pengalaman dalam instalasi dan konfigurasi unit server dari tahap perakitan fisik hingga deployment sistem. saya membangun lingkungan server yang fleksibel dengan fitur backup dan restore yang cepat.
+                        </p>
+                        <p>
+                            Selain itu saya juga membuat home server sendiri dengan memanfaatkan laptop yang tidak terpakai menggunakan <b>Proxmox</b>, di dalam Proxmox saya menginstall <b>TrueNas</b> untuk local backup dan <b>Debian 12</b> untuk web server.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="project-card h-100 shadow-sm">
+                    <h3>Guru Teknik Komputer dan Jaringan</h3>
+                    <div class="slider-container">
+                        <button class="slider-btn prev-btn">&#10094;</button>
+                        <img src="https://i.ibb.co.com/gFD6rSTh/guru-tkj.jpg" class="slide active" alt="guru-tkj">
+                        <button class="slider-btn next-btn">&#10095;</button>
+                    </div>
+                    <div class="project-info p-3">
+                        <p>
+                           Sebagai mantan Guru Teknik Komputer dan Jaringan (TKJ), saya terbiasa melakukan pendekatan berbasis solusi (problem-solving) dalam membimbing siswa menghadapi tantangan teknis. Pengalaman ini membentuk karakter yang sabar, teliti, dan komunikatif dalam melakukan troubleshooting perangkat keras maupun infrastruktur jaringan.
+                        </p>
+                        <p>
+                            Saya percaya bahwa komunikasi yang baik adalah kunci utama dalam keberhasilan transfer ilmu dan kolaborasi tim dalam lingkungan kerja IT yang dinamis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
