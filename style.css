@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+    transition: 0.5s;
+}
+.container { text-align: center; }
+button { padding: 10px 20px; cursor: pointer; border-radius: 8px; border: none; background: #007bff; color: white; }
